@@ -24,6 +24,8 @@ class Favourites(Base):
     id = Column(Integer, primary_key=True)
     favourite_characters = ForeignKey('character.id')
     favourite_planets = ForeignKey('location.id')
+    favourite_vehicles= ForeignKey('vehicle.id')
+    favourite_weapons= ForeignKey('weapon.id')
 
 class Character(Base):
     __tablename__ = 'character'
